@@ -1,0 +1,275 @@
+<html>
+  <head>
+    <title>Adventtikalenterit 2017</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <style>
+    @media screen and (max-width: 990px) {
+      #wholeTable {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-md" style="background-color: #2C378D;">
+      <div style="max-width: 77%;">
+        <span class="navbar-text" style="color: white;">Mankkaan Eräsusien adventtikalenterit 2017</span>
+      </div>
+      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" style="border-color: white;">
+          <span class="navbar-toggler-icon" style="color: white;"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Syötä tietoja</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ohjeet.html">Johtajaohje</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/ryhmat.html">Lisätyt muutokset<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="margin-top: 20px; max-width: 720px;">
+      <div class="row">
+
+      <div class="col-12">
+
+        <h3>Ryhmien tiedot</h3>
+
+        <div id="table1" class="table table-responsive table-hover table-bordered"  style="margin-bottom: 0px; position: absolute; top: 40px; left: 0px; z-index: 3;">
+          <table id="wholeTable" style="width: 100%;">
+            <thead style="border-top: none;">
+              <tr>
+                <th>Ryhmä</th>
+                <th>Myyjien määrä</th>
+                <th>Otettu</th>
+                <th>Palautettu</th>
+                <th>Maksettu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tableRow" id="koira">
+        <!-- SUDENPENNUT -->
+                <td>Koira</td>
+                <td id="koiraS"></td>
+                <td id="koiraO"></td>
+                <td id="koiraP"></td>
+                <td id="koiraM"></td>
+              </tr>
+              <tr class="tableRow" id="ilveksetTytöt">
+                <td>Ilvekset (tytöt)</td>
+                <td id="ilveksetTytötS"></td>
+                <td id="ilveksetTytötO"></td>
+                <td id="ilveksetTytötP"></td>
+                <td id="ilveksetTytötM"></td>
+              </tr>
+              <tr class="tableRow" id="ilveksetPojat">
+                <td>Ilvekset (pojat)</td>
+                <td id="ilveksetPojatS"></td>
+                <td id="ilveksetPojatO"></td>
+                <td id="ilveksetPojatP"></td>
+                <td id="ilveksetPojatM"></td>
+              </tr>
+              <tr class="tableRow" id="puumat">
+                <td>Puumat</td>
+                <td id="puumatS"></td>
+                <td id="puumatO"></td>
+                <td id="puumatP"></td>
+                <td id="puumatM"></td>
+              </tr>
+        <!-- SEIKKAILIJAT -->
+              <tr class="tableRow" id="lumikot">
+                <td>Lumikot</td>
+                <td id="lumikotS"></td>
+                <td id="lumikotO"></td>
+                <td id="lumikotP"></td>
+                <td id="lumikotM"></td>
+              </tr>
+              <tr class="tableRow" id="sudet">
+                <td>Sudet</td>
+                <td id="sudetS"></td>
+                <td id="sudetO"></td>
+                <td id="sudetP"></td>
+                <td id="sudetM"></td>
+              </tr>
+              <tr class="tableRow" id="nallekarkit">
+                <td>Nallekarkit</td>
+                <td id="nallekarkitS"></td>
+                <td id="nallekarkitO"></td>
+                <td id="nallekarkitP"></td>
+                <td id="nallekarkitM"></td>
+              </tr>
+          <!-- TARPOJAT -->
+              <tr class="tableRow" id="harmaakarhut">
+                <td>Harmaakarhut</td>
+                <td id="harmaakarhutS"></td>
+                <td id="harmaakarhutO"></td>
+                <td id="harmaakarhutP"></td>
+                <td id="harmaakarhutM"></td>
+              </tr>
+              <tr class="tableRow" id="saigat">
+                <td>Saigat</td>
+                <td id="saigatS"></td>
+                <td id="saigatO"></td>
+                <td id="saigatP"></td>
+                <td id="saigatM"></td>
+              </tr>
+              <tr class="tableRow" id="puuppelit">
+                <td>Puuppelit</td>
+                <td id="puuppelitS"></td>
+                <td id="puuppelitO"></td>
+                <td id="puuppelitP"></td>
+                <td id="puuppelitM"></td>
+              </tr>
+          <!-- JOHTAJAT -->
+              <tr class="tableRow" id="johtajat">
+                <td>Johtajat</td>
+                <td id="johtajatS"></td>
+                <td id="johtajatO"></td>
+                <td id="johtajatP"></td>
+                <td id="johtajatM"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+        <div id="table2" class="table table-responsive table-hover table-bordered"  style="border-radius: 3px; margin-bottom: 0px; position: absolute; top: 40px; left: 0px; z-index: 2; display: none;">
+          <table id="wholeTable1" style="width: 100%;">
+            <thead>
+              <tr>
+                <td colspan="5">
+                  <span id="groupName" style="text-transform:capitalize;"></span>
+                  <div id="back1" class="btn btn-outline-secondary btn-sm float-right" style="margin-top: -5px; margin-bottom: -5px;"><i class="fa fa-chevron-left" aria-hidden="true"></i> Takaisin</div>
+                </td>
+              </tr>
+            </thead>
+            <thead style="border-top: none;">
+              <tr>
+                <th>Nimi</th>
+                <th>Otettu</th>
+                <th>Palautettu</th>
+                <th>Maksettu</th>
+                <th>Maksettavaa</th>
+              </tr>
+            </thead>
+            <tbody id="table2body">
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+</body>
+
+<script>
+
+  $('#back1').on('click', function() {
+    $('#table1').toggle('slide', {direction: 'left'}, 1000);
+    $('#table2').toggle('slide', {direction: 'right'}, 1000);
+    setTimeout(function() {
+      $('#table2body').empty();
+      $('#groupName').empty();
+    }, 1000);
+  })
+
+  $('.tableRow').on('click', function() {
+
+    var group = this.id;
+
+    $.ajax({
+      method: 'POST',
+      url: 'back.php',
+      data: {
+        action: 'loadGroup',
+        group: group },
+      success: function(data) {
+
+        var parsedData2 = JSON.parse(data);
+        console.log(parsedData2);
+
+        if (parsedData2 == 'no sellers') {
+          // console.log('no data');
+          $('#groupName').append(group);
+          $('#table1').toggle('slide', {direction: 'left'}, 1000);
+          $('#table2').toggle('slide', {direction: 'right'}, 1000);
+        } else {
+
+          for (i = 0; i < parsedData2.length; i++) {
+            var maksettavaa = (parsedData2[i][1] - parsedData2[i][2]) * 7 - parsedData2[i][3];
+            var color;
+
+            if (maksettavaa === 0) {
+              color = 'table-success';
+            } else if (maksettavaa > 0) {
+              color = 'table-danger';
+            } else {
+              color = 'table-warning';
+            }
+
+            $('#table2body').append('<tr class="table2row" id="' + parsedData2[i][0] + '"><td>' + parsedData2[i][0] + '</td><td>' + parsedData2[i][1] + '</td><td>' + parsedData2[i][2] + '</td><td>' + parsedData2[i][3] + ' €</td><td class="' + color + '">' + maksettavaa + ' €</td></tr>');
+          }
+
+          $('#groupName').append(group);
+          $('#table1').toggle('slide', {direction: 'left'}, 1000);
+          $('#table2').toggle('slide', {direction: 'right'}, 1000);
+        }
+      }
+    });
+
+  });
+
+// LOAD INFORMATION FROM DATABASE ----------------------------------------------
+
+  function loadInformation() {
+
+    $.ajax({
+      method: "POST",
+      url: "back.php",
+      data: {
+        action: 'loadInfomation'},
+      success: function(data) {
+
+         var parsedData = JSON.parse(data);
+
+        console.log(parsedData);
+        console.log(data);
+
+        var groups = ['koira', 'ilveksetTytöt', 'ilveksetPojat', 'puumat', 'lumikot', 'sudet', 'nallekarkit', 'harmaakarhut', 'saigat', 'puuppelit', 'johtajat'];
+
+        for (i = 0; i < groups.length; i++) {
+          var groupS = '#' + groups[i] + 'S';
+          var groupO = '#' + groups[i] + 'O';
+          var groupP = '#' + groups[i] + 'P';
+          var groupM = '#' + groups[i] + 'M';
+
+          $(groupS).append(parsedData[i][0]);
+          $(groupO).append(parsedData[i][1]);
+          $(groupP).append(parsedData[i][2]);
+          $(groupM).append(parsedData[i][3] + ' €');
+        }
+
+      }
+    });
+  }
+
+  $(document).ready(function() {
+    loadInformation();
+  });
+
+</script>
